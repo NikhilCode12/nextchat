@@ -5,7 +5,11 @@ dotenv.config();
 const port = process.env.PORT;
 
 app.get("/", (req, res) => {
-  res.json({ name: "nextchat-server" });
+  res.status(200).json({success: 'correct'});
+});
+
+app.get("/chats", (req, res) => {
+  res.json({ name: "next chat" });
 });
 
 app.listen(port, () => {
